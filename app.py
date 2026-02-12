@@ -1,3 +1,5 @@
+import streamlit as st
+st.set_option("runner.fastReruns", False)
 # app.py — Monsieur Darmon (admin par e‑mail, validations, historiques)
 import io, re, unicodedata, os
 from datetime import datetime
