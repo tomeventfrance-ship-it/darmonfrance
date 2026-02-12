@@ -1,0 +1,36 @@
+activation:
+  beginner: {days: 7, hours: 15}
+  confirmed: {days: 12, hours: 25}
+  second: {days: 20, hours: 80}
+confirmed_threshold_diamants: 150000
+beginner_bonuses:
+  days_window: 90
+  milestones:
+    - {min: 75000,  max: 149999,  bonus: 500,  code: B1}
+    - {min: 150000, max: 499999,  bonus: 1088, code: B2}
+    - {min: 500000, max: 2000000, bonus: 3000, code: B3}
+
+# Modèle 2026 — Monsieur Darmon (haute rentabilité)
+# 2 paliers + bonus progression + bonus activité + cap payout
+mr_darmon:
+  # Conditions d'activité minimum (2026)
+  min_days: 12
+  min_hours: 25
+
+  # Conditions d'activité "max" (variante)
+  max_days: 22
+  max_hours: 100
+
+  # 2 paliers de % (base)
+  tier_low_min: 75000
+  tier_split: 400000
+  tier_low_rate: 0.045   # 4.5% entre 75k et 400k
+  tier_high_rate: 0.015  # 1.5% au-dessus de 400k
+
+  # Bonus
+  bonus_progression: 0.01      # +1% si progression (Diamants M > Diamants M-1)
+  bonus_activity_max: 0.005    # +0.5% si activité max (22j/100h)
+  bonus_cap: 0.015             # cap bonus cumul
+
+  # Plafond sécurité (mets null pour désactiver)
+  payout_cap: 60000
